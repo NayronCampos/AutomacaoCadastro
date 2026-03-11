@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NexoCorp – Sistema de Cadastro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="sidebar-logo">
+      <div class="logo-icon">N</div>
+      <span class="logo-text">NexoCorp</span>
+    </div>
+
+    <nav class="sidebar-nav">
+      <span class="nav-label">MENU</span>
+      <a href="#" class="nav-item active" data-section="pessoas">
+        <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        Colaboradores
+      </a>
+      <a href="#" class="nav-item" data-section="produtos">
+        <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+        Produtos
+      </a>
+      <a href="#" class="nav-item" data-section="registros">
+        <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        Registros
+      </a>
+    </nav>
+
+    <div class="sidebar-user">
+      <div class="user-avatar">AD</div>
+      <div class="user-info">
+        <span class="user-name">Admin</span>
+        <span class="user-role">Gerente de TI</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main">
+
+    <!-- Header -->
+    <header class="topbar">
+      <div class="topbar-title">
+        <span id="page-title">Cadastro de Colaboradores</span>
+        <span class="breadcrumb">NexoCorp &rsaquo; <span id="breadcrumb-sub">Colaboradores</span></span>
+      </div>
+      <div class="topbar-actions">
+        <div class="search-bar">
+          <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="text" placeholder="Buscar..." />
+        </div>
+        <div class="notif-bell">
+          <svg viewBox="0 0 24 24"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+          <span class="notif-dot"></span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Content Area -->
+    <div class="content">
+
+      <!-- ===== PESSOAS SECTION ===== -->
+      <section id="section-pessoas" class="section active">
+        <div class="section-header">
+          <div>
+            <h2>Novo Colaborador</h2>
+            <p>Preencha os dados abaixo para cadastrar um colaborador</p>
+          </div>
+          <div class="header-badges">
+            <span class="badge badge-blue">RH</span>
+            <span class="badge badge-green">Ativo</span>
+          </div>
+        </div>
+
+        <form id="form-pessoas" class="card-form" novalidate>
+          <div class="form-grid">
+            <div class="form-group span-2">
+              <label for="p-nome">Nome Completo *</label>
+              <input type="text" id="p-nome" placeholder="Ex: João da Silva" required />
+            </div>
+            <div class="form-group">
+              <label for="p-cpf">CPF *</label>
+              <input type="text" id="p-cpf" placeholder="000.000.000-00" maxlength="14" required />
+            </div>
+            <div class="form-group">
+              <label for="p-data-nasc">Data de Nascimento *</label>
+              <input type="date" id="p-data-nasc" required />
+            </div>
+            <div class="form-group">
+              <label for="p-email">E-mail Corporativo *</label>
+              <input type="email" id="p-email" placeholder="colaborador@nexocorp.com" required />
+            </div>
+            <div class="form-group">
+              <label for="p-telefone">Telefone</label>
+              <input type="text" id="p-telefone" placeholder="(00) 00000-0000" maxlength="15" />
+            </div>
+            <div class="form-group">
+              <label for="p-cargo">Cargo *</label>
+              <select id="p-cargo" required>
+                <option value="">Selecione...</option>
+                <option>Analista</option>
+                <option>Desenvolvedor</option>
+                <option>Designer</option>
+                <option>Gerente</option>
+                <option>Diretor</option>
+                <option>Assistente</option>
+                <option>Estagiário</option>
+                <option>Outro</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="p-departamento">Departamento *</label>
+              <select id="p-departamento" required>
+                <option value="">Selecione...</option>
+                <option>TI</option>
+                <option>RH</option>
+                <option>Financeiro</option>
+                <option>Marketing</option>
+                <option>Comercial</option>
+                <option>Operações</option>
+                <option>Jurídico</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="p-salario">Salário (R$)</label>
+              <input type="number" id="p-salario" placeholder="0,00" min="0" step="0.01" />
+            </div>
+            <div class="form-group">
+              <label for="p-admissao">Data de Admissão *</label>
+              <input type="date" id="p-admissao" required />
+            </div>
+            <div class="form-group span-2">
+              <label for="p-endereco">Endereço</label>
+              <input type="text" id="p-endereco" placeholder="Rua, número, bairro, cidade - UF" />
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <button type="button" class="btn-secondary" onclick="limparForm('form-pessoas')">Limpar</button>
+            <button type="submit" class="btn-primary">
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              Cadastrar Colaborador
+            </button>
+          </div>
+        </form>
+      </section>
+
+      <!-- ===== PRODUTOS SECTION ===== -->
+      <section id="section-produtos" class="section">
+        <div class="section-header">
+          <div>
+            <h2>Novo Produto</h2>
+            <p>Preencha os dados abaixo para cadastrar um produto no estoque</p>
+          </div>
+          <div class="header-badges">
+            <span class="badge badge-purple">Estoque</span>
+            <span class="badge badge-green">Ativo</span>
+          </div>
+        </div>
+
+        <form id="form-produtos" class="card-form" novalidate>
+          <div class="form-grid">
+            <div class="form-group span-2">
+              <label for="pr-nome">Nome do Produto *</label>
+              <input type="text" id="pr-nome" placeholder="Ex: Notebook Dell Inspiron 15" required />
+            </div>
+            <div class="form-group">
+              <label for="pr-codigo">Código SKU *</label>
+              <input type="text" id="pr-codigo" placeholder="SKU-0001" required />
+            </div>
+            <div class="form-group">
+              <label for="pr-categoria">Categoria *</label>
+              <select id="pr-categoria" required>
+                <option value="">Selecione...</option>
+                <option>Eletrônicos</option>
+                <option>Móveis</option>
+                <option>Materiais de Escritório</option>
+                <option>Vestuário</option>
+                <option>Alimentos</option>
+                <option>Serviços</option>
+                <option>Software</option>
+                <option>Outro</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="pr-preco">Preço de Venda (R$) *</label>
+              <input type="number" id="pr-preco" placeholder="0,00" min="0" step="0.01" required />
+            </div>
+            <div class="form-group">
+              <label for="pr-custo">Custo (R$)</label>
+              <input type="number" id="pr-custo" placeholder="0,00" min="0" step="0.01" />
+            </div>
+            <div class="form-group">
+              <label for="pr-estoque">Quantidade em Estoque *</label>
+              <input type="number" id="pr-estoque" placeholder="0" min="0" required />
+            </div>
+            <div class="form-group">
+              <label for="pr-min-estoque">Estoque Mínimo</label>
+              <input type="number" id="pr-min-estoque" placeholder="0" min="0" />
+            </div>
+            <div class="form-group">
+              <label for="pr-fornecedor">Fornecedor</label>
+              <input type="text" id="pr-fornecedor" placeholder="Nome do fornecedor" />
+            </div>
+            <div class="form-group">
+              <label for="pr-unidade">Unidade de Medida</label>
+              <select id="pr-unidade">
+                <option value="un">Unidade (un)</option>
+                <option value="kg">Kilograma (kg)</option>
+                <option value="g">Grama (g)</option>
+                <option value="l">Litro (l)</option>
+                <option value="m">Metro (m)</option>
+                <option value="cx">Caixa (cx)</option>
+              </select>
+            </div>
+            <div class="form-group span-2">
+              <label for="pr-descricao">Descrição</label>
+              <textarea id="pr-descricao" rows="3" placeholder="Descrição detalhada do produto..."></textarea>
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <button type="button" class="btn-secondary" onclick="limparForm('form-produtos')">Limpar</button>
+            <button type="submit" class="btn-primary">
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              Cadastrar Produto
+            </button>
+          </div>
+        </form>
+      </section>
+
+      <!-- ===== REGISTROS SECTION ===== -->
+      <section id="section-registros" class="section">
+        <div class="section-header">
+          <div>
+            <h2>Registros Cadastrados</h2>
+            <p>Visualize todos os cadastros realizados nesta sessão</p>
+          </div>
+          <div class="header-badges">
+            <span class="badge badge-gray" id="badge-total">0 registros</span>
+          </div>
+        </div>
+
+        <div class="card-form">
+          <div class="tabs">
+            <button class="tab active" data-tab="tab-pessoas-reg">Colaboradores</button>
+            <button class="tab" data-tab="tab-produtos-reg">Produtos</button>
+          </div>
+
+          <div id="tab-pessoas-reg" class="tab-content active">
+            <div id="table-pessoas-wrapper" class="empty-state">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              <p>Nenhum colaborador cadastrado ainda.</p>
+            </div>
+          </div>
+
+          <div id="tab-produtos-reg" class="tab-content">
+            <div id="table-produtos-wrapper" class="empty-state">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              <p>Nenhum produto cadastrado ainda.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast" aria-live="polite">
+    <div id="toast-icon" class="toast-icon">✓</div>
+    <span id="toast-msg">Cadastrado com sucesso!</span>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

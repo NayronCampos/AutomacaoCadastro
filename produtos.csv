@@ -1,0 +1,6 @@
+nome,codigo,categoria,preco,custo,estoque,min_estoque,fornecedor,unidade,descricao,status
+Notebook Dell Inspiron 15,SKU-0001,Eletrônicos,3299.90,2400.00,15,3,Dell Brasil,un,Notebook com Intel Core i5 12ª gen 8GB RAM 256GB SSD,Ativo
+Mouse Logitech MX Master 3,SKU-0002,Eletrônicos,499.90,320.00,40,10,Logitech Brasil,un,Mouse sem fio ergonômico com scroll de alta precisão,Ativo
+Cadeira Ergonômica HM Flex,SKU-0003,Móveis,1850.00,1100.00,8,2,HM Móveis,un,Cadeira giratória com apoio lombar ajustável,Ativo
+Resma Papel A4 75g,SKU-0004,Materiais de Escritório,28.90,18.00,200,50,Chamex,cx,Pacote com 500 folhas brancas,Ativo
+Monitor LG 24" Full HD,SKU-0005,Eletrônicos,999.00,720.00,22,5,LG Electronics,un,Monitor IPS 75Hz com entrada HDMI e DisplayPort,Ativo

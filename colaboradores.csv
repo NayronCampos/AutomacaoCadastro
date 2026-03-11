@@ -1,0 +1,6 @@
+nome,cpf,data_nasc,email,telefone,cargo,departamento,salario,admissao,endereco,status
+Ana Paula Souza,123.456.789-00,1990-05-14,ana.souza@nexocorp.com,(11) 98765-4321,Analista,TI,5500.00,2022-03-01,Rua das Flores 12 - São Paulo/SP,Ativo
+Carlos Eduardo Lima,234.567.890-11,1985-11-20,carlos.lima@nexocorp.com,(21) 91234-5678,Gerente,Financeiro,9800.00,2019-07-15,Av. Brasil 300 - Rio de Janeiro/RJ,Ativo
+Fernanda Costa,345.678.901-22,1995-02-08,fernanda.costa@nexocorp.com,(31) 99876-5432,Designer,Marketing,4200.00,2023-01-10,Rua da Liberdade 45 - Belo Horizonte/MG,Ativo
+Rafael Mendes,456.789.012-33,1988-09-30,rafael.mendes@nexocorp.com,(11) 97654-3210,Desenvolvedor,TI,7300.00,2021-06-20,Rua Augusta 800 - São Paulo/SP,Ativo
+Juliana Pereira,567.890.123-44,1993-04-17,juliana.pereira@nexocorp.com,(85) 98765-1111,Assistente,RH,2800.00,2024-02-01,Av. Santos Dumont 220 - Fortaleza/CE,Ativo
